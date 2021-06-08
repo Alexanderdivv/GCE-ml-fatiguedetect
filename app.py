@@ -6,7 +6,7 @@ from Classifier import Classification
 PATH = os.getcwd()
 IMAGE_LOCATION = os.path.join(PATH,"images")
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
-app = Flask(_name_, static_url_path='/')
+app = Flask(__name__, static_url_path='/')
 
 def allowed_file(filename):
     return '.' in filename and \
