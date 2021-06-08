@@ -8,21 +8,21 @@ from google.cloud import storage
 from flask import jsonify, make_response
 
 
-BUCKET_NAME        = "fatigue-detection"
-PROJECT_ID         = "face-to-face-fatigue"
-GCS_MODEL_FILE     = "fatigue.h5"
-# Initialise a client
-client   = storage.Client(PROJECT_ID)    
+# BUCKET_NAME        = "fatigue-detection"
+# PROJECT_ID         = "face-to-face-fatigue"
+# GCS_MODEL_FILE     = "fatigue.h5"
+# # Initialise a client
+# client   = storage.Client(PROJECT_ID)    
 
-bucket   = client.get_bucket(BUCKET_NAME)
+# bucket   = client.get_bucket(BUCKET_NAME)
     
-blob     = bucket.blob(GCS_MODEL_FILE)
+# blob     = bucket.blob(GCS_MODEL_FILE)
     
-folder = '/'
-if not os.path.exists(folder):
-    os.makedirs(folder)
+# folder = '/'
+# if not os.path.exists(folder):
+#     os.makedirs(folder)
 
-blob.download_to_filename(folder + "fatigue.h5")
+# blob.download_to_filename(folder + "fatigue.h5")
 
 # global model
 # if not model:
